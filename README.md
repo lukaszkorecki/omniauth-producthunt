@@ -1,6 +1,8 @@
 # Omniauth::Producthunt
 
-TODO: Write a gem description
+Omniauth strategy for Producthunt.
+It sets the scope to `private+public` so that authenticated user's details can be obtained.
+By default `public` scope will not grant access to these details.
 
 ## Installation
 
@@ -14,13 +16,16 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install omniauth-producthunt
-
 ## Usage
 
-TODO: Write usage instructions here
+Add this to an initializer or your application configuration:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :producthunt, ENV['producthunt_key'], ENV['producthunt_secret']
+end
+
+```
 
 ## Contributing
 
