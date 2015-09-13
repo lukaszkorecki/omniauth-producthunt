@@ -9,7 +9,7 @@ By default `public` scope will not grant access to these details.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omniauth-producthunt'
+gem 'omniauth-producthunt', :git => 'git://github.com/lukaszkorecki/omniauth-producthunt.git'
 ```
 
 And then execute:
